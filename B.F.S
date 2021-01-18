@@ -2,10 +2,11 @@ class Solution
 {
     public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj)
     {
-        boolean []visited =new boolean[V];
+        boolean [] visited =new boolean[V];
         LinkedList<Integer> queue=new LinkedList<>();
         ArrayList<Integer> result=new ArrayList<>();
-        visisted[0]=true;
+        visited[0]=true;
+        result.add(0);
         queue.add(0);
         while(!queue.isEmpty()){
             int size = queue.size();
