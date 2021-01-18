@@ -3,11 +3,11 @@ MIC AND JURY
 class Solution{
     static int micsandjury(int N,int M,int[] teams){
         int l = 1;
-         int ma=0;
-         for(int i=0;i<M;i++)
-         if(ma<teams[i])
-         ma=teams[i];
-         int r=ma;
+        int max=0;
+        for(int i=0;i<M;i++)
+            if(max<teams[i])
+                max=teams[i];
+        int r=max;
         int ans=0;
         while(l<=r)
         {
@@ -17,9 +17,9 @@ class Solution{
             for(int i=0;i<M;i++)
             {
                 if(teams[i]%mid!=0)
-                groups+=teams[i]/mid+1;  
+                    groups+=teams[i]/mid+1;  
                 else
-                groups+=teams[i]/mid;
+                    groups+=teams[i]/mid;
             }
             if(groups>N)
             {
@@ -27,7 +27,6 @@ class Solution{
             }
             else
             {
-                
                	ans = mid;
                 r=mid-1;
             }
